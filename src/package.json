@@ -1,0 +1,42 @@
+{
+  "name": "projectsangular-registration-login-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "joi": "^17.4.0",
+    "server": "^1.0.32",
+    "supertest": "^6.1.3",
+    "swagger-express-router": "^1.0.0",
+    "swagger-jsdoc": "^7.0.0-rc.6",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^7.22.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "standard": "^16.0.3"
+  },
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=1000 --coverage",
+    "pretest": "cross-env NODE_ENV=test npm run "
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
